@@ -25,7 +25,7 @@ Example:
 <link href="../polymer/polymer.html" rel="import">
 <link href="../paper-icon-button/paper-icon-button.html" rel="import">
 
-<polymer-element name="paper-fab" extends="paper-icon-button">
+<polymer-element name="paper-fab" extends="paper-icon-button" attributes="mini">
 
   <template>
 
@@ -41,13 +41,15 @@ Example:
       publish: {
 
         /**
-         * See [`<paper-button>`](../paper-button).
+         * Set this to true to style this is a "mini" FAB.
          *
-         * @attribute raisedButton
+         * @attribute mini
          * @type boolean
-         * @default true
+         * @default false
          */
-        raisedButton: {value: true, reflect: true}
+        mini: false,
+
+        raised: true
 
       }
 

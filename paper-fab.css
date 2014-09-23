@@ -8,29 +8,24 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-:host {
-  box-sizing: border-box;
+ :host {
+  display: inline-block;
   width: 56px;
   height: 56px;
   background: #d23f31;
   border-radius: 50%;
-  fill: #fff;
 }
 
-:host(.mini) {
+:host([mini]) {
   width: 40px;
   height: 40px;
 }
 
-:host /deep/ #focusBg {
-  display: none;
+:host /deep/ #button {
+  width: inherit;
+  height: inherit;
 }
 
-:host /deep/ #icon {
-  display: block;
-  margin: 16px;
-}
-
-:host(.mini) /deep/ #icon {
-  margin: 8px;
+:host(:not([mini])) /deep/ #button {
+  padding: 16px;
 }
